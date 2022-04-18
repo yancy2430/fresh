@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzl.fresh.mapper.SysUserMapper">
+    <select id="selectUserGroupPage" resultMap="userResultMap">
+        SELECT * FROM `td_sys_user` ${ew.customSqlSegment}
+    </select>
+    <resultMap type="com.hzl.fresh.entity.SysUser" id="userResultMap">
+        <id property="id" column="id"/>
+        <collection property="groups" column="id"
+                    javaType="ArrayList" ofType="com.hzl.fresh.entity.SysGroup"
+                    select="com.hzl.fresh.mapper.SysGroupMapper.selectGroupListByUserId">
+        </collection>
+    </resultMap>
+</mapper>
