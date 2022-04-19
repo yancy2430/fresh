@@ -20,7 +20,7 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("td_sys_config")
+@TableName("hzl_sys_config")
 public class SysConfig implements Serializable {
 
     private static final long serialVersionUID = 1L;

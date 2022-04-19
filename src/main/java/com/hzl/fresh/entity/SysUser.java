@@ -23,7 +23,7 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("td_sys_user")
+@TableName("hzl_sys_user")
 @ToString
 public class SysUser implements Serializable {
 

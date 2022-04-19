@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("td_sys_sms_record")
+@TableName("hzl_sys_sms_record")
 public class SysSmsRecord implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("td_shop_notice_take")
+@TableName("hzl_shop_notice_take")
 public class ShopNoticeTake implements Serializable {
 
     private static final long serialVersionUID = 1L;

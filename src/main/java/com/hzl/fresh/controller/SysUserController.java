@@ -119,7 +119,7 @@ public class SysUserController extends ApiController {
                     if (null != groupId) {
                         List<Integer> groupIds = sysGroupService.listObjs(new QueryWrapper<SysGroup>().lambda().select(SysGroup::getId).eq(SysGroup::getPid, groupId), o -> ((Long) o).intValue());
                         groupIds.add(groupId);
-                        q.exists(StrUtil.format("select user_id from td_sys_user_group where user_id=td_sys_user.id and group_id in ({})", StrUtil.join(",", groupIds)));
+                        q.exists(StrUtil.format("select user_id from hzl_sys_user_group where user_id=hzl_sys_user.id and group_id in ({})", StrUtil.join(",", groupIds)));
                     }
                 })
 

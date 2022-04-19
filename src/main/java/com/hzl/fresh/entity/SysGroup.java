@@ -21,7 +21,7 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("td_sys_group")
+@TableName("hzl_sys_group")
 public class SysGroup implements Serializable {
 
     private static final long serialVersionUID = 1L;

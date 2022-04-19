@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("td_sys_login_log")
+@TableName("hzl_sys_login_log")
 public class SysLoginLog implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -22,7 +22,7 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName(value = "td_sys_resources",autoResultMap = true)
+@TableName(value = "hzl_sys_resources",autoResultMap = true)
 public class SysResources implements Serializable {
 
     private static final long serialVersionUID = 1L;
