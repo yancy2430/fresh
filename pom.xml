@@ -87,7 +87,7 @@
                 <artifactId>tdeado-generate</artifactId>
                 <version>1.0.1</version>
                 <configuration>
-                    <jdbcUrl>jdbc:mysql://49.234.15.67:3306/zycl</jdbcUrl>
+                    <jdbcUrl>jdbc:mysql://49.234.15.67:3306/hzl</jdbcUrl>
                     <username>root</username>
                     <password>YANGzhe2430...</password>
                     <driverName>com.mysql.cj.jdbc.Driver</driverName>
