@@ -1,6 +1,6 @@
 package com.hzl.fresh.config;
 
-import com.hzl.fresh.cache.CacheService;
+import com.hzl.fresh.core.cache.CacheService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

@@ -1,8 +1,8 @@
-package com.hzl.fresh.cache.impl;
+package com.hzl.fresh.core.cache.impl;
 
 import cn.hutool.cache.Cache;
 import cn.hutool.cache.CacheUtil;
-import com.hzl.fresh.cache.CacheService;
+import com.hzl.fresh.core.cache.CacheService;
 
 /**
  * 缓存接口

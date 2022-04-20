@@ -1,4 +1,4 @@
-package com.hzl.fresh.enums;
+package com.hzl.fresh.core.enums;
 
 import com.hzl.fresh.core.IErrorCode;
 

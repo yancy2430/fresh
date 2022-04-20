@@ -1,4 +1,4 @@
-package com.hzl.fresh.exception;
+package com.hzl.fresh.core.exception;
 
 import com.hzl.fresh.core.IErrorCode;
 

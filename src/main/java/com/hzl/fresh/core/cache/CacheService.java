@@ -1,4 +1,4 @@
-package com.hzl.fresh.cache;
+package com.hzl.fresh.core.cache;
 
 
 /**

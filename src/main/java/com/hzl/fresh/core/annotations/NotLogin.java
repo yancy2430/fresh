@@ -1,4 +1,4 @@
-package com.hzl.fresh.annotations;
+package com.hzl.fresh.core.annotations;
 
 import java.lang.annotation.*;
 

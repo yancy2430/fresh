@@ -3,7 +3,7 @@ package com.hzl.fresh.service.impl;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hzl.fresh.exception.ApiException;
+import com.hzl.fresh.core.exception.ApiException;
 import com.hzl.fresh.config.properties.UploadProperties;
 import com.hzl.fresh.entity.SysAttachment;
 import com.hzl.fresh.mapper.SysAttachmentMapper;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

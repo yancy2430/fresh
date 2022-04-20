@@ -85,7 +85,7 @@
             <plugin>
                 <groupId>com.tdeado</groupId>
                 <artifactId>tdeado-generate</artifactId>
-                <version>1.0.1</version>
+                <version>1.0.2</version>
                 <configuration>
                     <jdbcUrl>jdbc:mysql://49.234.15.67:3306/hzl</jdbcUrl>
                     <username>root</username>
@@ -93,9 +93,9 @@
                     <driverName>com.mysql.cj.jdbc.Driver</driverName>
                     <tablePrefix>hzl_</tablePrefix>
                     <author>hzl</author>
-                    <superControllerClass>com.hzl.fresh.core.ApiController</superControllerClass>
                     <jsPath>/Users/yangzhe/WebstormProjects/admin-view/src/api/</jsPath>
                     <vuePath>/Users/yangzhe/WebstormProjects/admin-view/src/views/</vuePath>
+                    <responseResultClass>com.hzl.fresh.core.R</responseResultClass>
                 </configuration>
             </plugin>
             <plugin>

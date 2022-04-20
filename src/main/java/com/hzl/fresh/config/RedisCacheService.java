@@ -1,6 +1,6 @@
 package com.hzl.fresh.config;
 
-import com.hzl.fresh.cache.CacheService;
+import com.hzl.fresh.core.cache.CacheService;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisStringCommands;
@@ -8,7 +8,6 @@ import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.types.Expiration;
 import org.springframework.data.redis.serializer.RedisSerializer;
-import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 public class RedisCacheService implements CacheService<String,Object> {

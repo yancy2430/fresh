@@ -1,12 +1,12 @@
-package com.hzl.fresh.global;
+package com.hzl.fresh.core.global;
 
 
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.hzl.fresh.core.IErrorCode;
 import com.hzl.fresh.core.R;
-import com.hzl.fresh.enums.ApiErrorCode;
-import com.hzl.fresh.exception.ApiException;
+import com.hzl.fresh.core.enums.ApiErrorCode;
+import com.hzl.fresh.core.exception.ApiException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;

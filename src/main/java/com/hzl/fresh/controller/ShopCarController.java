@@ -9,18 +9,17 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.hzl.fresh.entity.ShopCar;
 import com.hzl.fresh.service.IShopCarService;
 import org.springframework.web.bind.annotation.RestController;
-import com.hzl.fresh.core.ApiController;
 
 /**
  *
  * 购物车表
  *
  * @author hzl
- * @since 2022-04-19
+ * @since 2022-04-20
  */
 @RestController
 @RequestMapping("/fresh/shopCar")
-public class ShopCarController extends ApiController {
+public class ShopCarController {
     @Autowired
     IShopCarService shopCarService;
 
@@ -31,7 +30,7 @@ public class ShopCarController extends ApiController {
     */
     @RequestMapping("getById")
     public R<ShopCar> getById(@RequestParam("id") String id){
-        return success(shopCarService.getById(id));
+        return R.ok(shopCarService.getById(id));
     }
 
     /**
@@ -41,7 +40,7 @@ public class ShopCarController extends ApiController {
      */
     @PostMapping("save")
     public R<Boolean> save(@RequestBody ShopCar shopCar){
-        return success(shopCarService.saveOrUpdate(shopCar));
+        return R.ok(shopCarService.saveOrUpdate(shopCar));
     }
     /**
      * 删除购物车表
@@ -50,7 +49,7 @@ public class ShopCarController extends ApiController {
      */
     @RequestMapping("removeById")
     public R<Boolean> removeById(@RequestParam String id){
-        return success(shopCarService.removeById(id));
+        return R.ok(shopCarService.removeById(id));
     }
 
     /**
@@ -67,7 +66,7 @@ public class ShopCarController extends ApiController {
             ShopCar shopCar
     ) {
         IPage<ShopCar> pageData = shopCarService.page(new Page<>(page, size), new QueryWrapper<>(shopCar));
-        return success(pageData);
+        return R.ok(pageData);
     }
 
 }

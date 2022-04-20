@@ -1,7 +1,7 @@
 package com.hzl.fresh.core;
 
-import com.hzl.fresh.enums.ApiErrorCode;
-import com.hzl.fresh.exception.ApiException;
+import com.hzl.fresh.core.enums.ApiErrorCode;
+import com.hzl.fresh.core.exception.ApiException;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
