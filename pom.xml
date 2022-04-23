@@ -93,8 +93,8 @@
                     <driverName>com.mysql.cj.jdbc.Driver</driverName>
                     <tablePrefix>hzl_</tablePrefix>
                     <author>hzl</author>
-                    <jsPath>/Users/yangzhe/WebstormProjects/admin-view/src/api/</jsPath>
-                    <vuePath>/Users/yangzhe/WebstormProjects/admin-view/src/views/</vuePath>
+                    <jsPath>/Users/yangzhe/WebstormProjects/fresh-admin/src/api/</jsPath>
+                    <vuePath>/Users/yangzhe/WebstormProjects/fresh-admin/src/views/shop/</vuePath>
                     <responseResultClass>com.hzl.fresh.core.R</responseResultClass>
                 </configuration>
             </plugin>
