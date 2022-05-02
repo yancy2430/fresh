@@ -3,72 +3,70 @@ package com.hzl.fresh.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hzl.fresh.core.R;
-
-import com.hzl.fresh.entity.ShopAppMenu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.hzl.fresh.service.IShopAppMenuService;
+import com.hzl.fresh.entity.ShopRecord;
+import com.hzl.fresh.service.IShopRecordService;
 import org.springframework.web.bind.annotation.RestController;
-import com.hzl.fresh.core.ApiController;
 
 /**
  *
- * 
+ * 直连记录表
  *
  * @author hzl
- * @since 2022-04-19
+ * @since 2022-05-02
  */
 @RestController
-@RequestMapping("/fresh/shopAppMenu")
-public class ShopAppMenuController extends ApiController {
+@RequestMapping("/fresh/shopRecord")
+public class ShopRecordController {
     @Autowired
-    IShopAppMenuService shopAppMenuService;
+    IShopRecordService shopRecordService;
 
     /**
-    * 获取
+    * 获取直连记录表
     * @param id 数据ID
     * @return 返回结果
     */
     @RequestMapping("getById")
-    public R<ShopAppMenu> getById(@RequestParam("id") String id){
-        return success(shopAppMenuService.getById(id));
+    public R<ShopRecord> getById(@RequestParam("id") String id){
+        return R.ok(shopRecordService.getById(id));
     }
 
     /**
-     * 保存或更新
-     * @param shopAppMenu 保存数据
+     * 保存或更新直连记录表
+     * @param shopRecord 保存数据
      * @return 返回结果
      */
     @PostMapping("save")
-    public R<Boolean> save(@RequestBody ShopAppMenu shopAppMenu){
-        return success(shopAppMenuService.saveOrUpdate(shopAppMenu));
+    public R<Boolean> save(@RequestBody ShopRecord shopRecord){
+        return R.ok(shopRecordService.saveOrUpdate(shopRecord));
     }
     /**
-     * 删除
+     * 删除直连记录表
      * @param id 数据ID
      * @return 返回结果
      */
     @RequestMapping("removeById")
     public R<Boolean> removeById(@RequestParam String id){
-        return success(shopAppMenuService.removeById(id));
+        return R.ok(shopRecordService.removeById(id));
     }
 
     /**
-     * 列表
+     * 直连记录表列表
      * @param page 页码
      * @param size 大小
-     * @param shopAppMenu 参数实体
+     * @param shopRecord 参数实体
      * @return 返回结果
      */
     @RequestMapping("page")
-    public R<IPage<ShopAppMenu>> page(
+    public R<IPage<ShopRecord>> page(
             @RequestParam("page") Integer page,
             @RequestParam("size") Integer size,
-            ShopAppMenu shopAppMenu
+            ShopRecord shopRecord
     ) {
-        IPage<ShopAppMenu> pageData = shopAppMenuService.page(new Page<>(page, size), new QueryWrapper<>(shopAppMenu));
-        return success(pageData);
+        IPage<ShopRecord> pageData = shopRecordService.page(new Page<>(page, size), new QueryWrapper<>(shopRecord));
+        return R.ok(pageData);
     }
 
 }

@@ -1,7 +1,7 @@
 package com.hzl.fresh.service;
 
-import com.hzl.fresh.entity.ShopAppMenu;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.hzl.fresh.entity.ShopAppMenu;
 
 /**
  * <p>

@@ -1,7 +1,7 @@
 package com.hzl.fresh.mapper;
 
-import com.hzl.fresh.entity.ShopAppMenu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.hzl.fresh.entity.ShopAppMenu;
 
 /**
  * <p>
