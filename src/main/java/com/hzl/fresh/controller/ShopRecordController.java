@@ -10,6 +10,9 @@ import com.hzl.fresh.entity.ShopRecord;
 import com.hzl.fresh.service.IShopRecordService;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * 直连记录表
@@ -63,9 +66,14 @@ public class ShopRecordController {
     public R<IPage<ShopRecord>> page(
             @RequestParam("page") Integer page,
             @RequestParam("size") Integer size,
+            @RequestParam(value = "sorter",required = false) List<String> sorter,
             ShopRecord shopRecord
     ) {
-        IPage<ShopRecord> pageData = shopRecordService.page(new Page<>(page, size), new QueryWrapper<>(shopRecord));
+        QueryWrapper<ShopRecord> queryWrapper = new QueryWrapper<>(shopRecord);
+        if (null!=sorter){
+            queryWrapper.orderBy(sorter.size()>1,sorter.get(1).equals("asc"),sorter.get(0));
+        }
+        IPage<ShopRecord> pageData = shopRecordService.page(new Page<>(page, size),queryWrapper);
         return R.ok(pageData);
     }
 
